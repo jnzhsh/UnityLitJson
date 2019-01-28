@@ -1,0 +1,164 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C1AE5DE-A406-4185-B257-7DD64C16ED17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>UnityLitJson</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>F:\unity2018\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="benchmarks\.gitignore" />
+    <Content Include="Docs\out\css\docs.css" />
+    <Content Include="Docs\out\css\vendor\normalize.css" />
+    <Content Include="Docs\out\css\vendor\unsemantic.css" />
+    <Content Include="Docs\out\quickstart.html" />
+    <Content Include="Docs\template-web.htm" />
+    <Content Include="Docs\template.htm" />
+    <Content Include="Libraries\nunit.framework.dll" />
+    <Content Include="test\json-example.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\upstream\custom_object_importers" />
+    <None Include=".git\logs\refs\remotes\upstream\gh-pages" />
+    <None Include=".git\logs\refs\remotes\upstream\json_ignore_attribute" />
+    <None Include=".git\logs\refs\remotes\upstream\master" />
+    <None Include=".git\logs\refs\remotes\upstream\v2" />
+    <None Include=".git\objects\56\a3310ea3df7a887470a52d29f4c2875339614e" />
+    <None Include=".git\objects\c3\0ff6e3bf2435c6e6cced57a22d9915622d03ea" />
+    <None Include=".git\objects\pack\pack-43e06bdce757d3445f410ab970f9faa0a77bc007.idx" />
+    <None Include=".git\objects\pack\pack-43e06bdce757d3445f410ab970f9faa0a77bc007.pack" />
+    <None Include=".git\ORIG_HEAD" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\upstream\custom_object_importers" />
+    <None Include=".git\refs\remotes\upstream\gh-pages" />
+    <None Include=".git\refs\remotes\upstream\json_ignore_attribute" />
+    <None Include=".git\refs\remotes\upstream\master" />
+    <None Include=".git\refs\remotes\upstream\v2" />
+    <None Include=".vs\config\applicationhost.config" />
+    <None Include=".vs\LitJson\v15\.suo" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\tasks.vs.json" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="benchmarks\GNUmakefile" />
+    <None Include="benchmarks\README" />
+    <None Include="Docs\Makefile" />
+    <None Include="Docs\quickstart\guide.md" />
+    <None Include="Docs\quickstart\intro.md" />
+    <None Include="NEWS.md" />
+    <None Include="README.md" />
+    <None Include="UnityLitJson.unitypackage" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="benchmarks\Benchmark.cs" />
+    <Compile Include="benchmarks\BmCommon.cs" />
+    <Compile Include="benchmarks\BmJayrockExport.cs" />
+    <Compile Include="benchmarks\BmJayrockImport.cs" />
+    <Compile Include="benchmarks\BmJayrockOutput.cs" />
+    <Compile Include="benchmarks\BmJayrockReader.cs" />
+    <Compile Include="benchmarks\BmJayrockWriter.cs" />
+    <Compile Include="benchmarks\BmLitJsonExport.cs" />
+    <Compile Include="benchmarks\BmLitJsonImport.cs" />
+    <Compile Include="benchmarks\BmLitJsonOutput.cs" />
+    <Compile Include="benchmarks\BmLitJsonReader.cs" />
+    <Compile Include="benchmarks\BmLitJsonWriter.cs" />
+    <Compile Include="benchmarks\BmNewtonsoftExport.cs" />
+    <Compile Include="benchmarks\BmNewtonsoftImport.cs" />
+    <Compile Include="benchmarks\BmNewtonsoftOutput.cs" />
+    <Compile Include="benchmarks\BmNewtonsoftReader.cs" />
+    <Compile Include="benchmarks\BmNewtonsoftWriter.cs" />
+    <Compile Include="Source\Extensions.cs" />
+    <Compile Include="Source\IJsonWrapper.cs" />
+    <Compile Include="Source\JsonAttribute.cs" />
+    <Compile Include="Source\JsonData.cs" />
+    <Compile Include="Source\JsonException.cs" />
+    <Compile Include="Source\JsonMapper.cs" />
+    <Compile Include="Source\JsonMockWrapper.cs" />
+    <Compile Include="Source\JsonReader.cs" />
+    <Compile Include="Source\JsonWriter.cs" />
+    <Compile Include="Source\Lexer.cs" />
+    <Compile Include="Source\Netstandard15Polyfill.cs" />
+    <Compile Include="Source\ParserToken.cs" />
+    <Compile Include="Source\Platform.cs" />
+    <Compile Include="Source\Unity\UnityTypeBindings.cs" />
+    <Compile Include="test\JsonAliasTest.cs" />
+    <Compile Include="test\JsonArrayImporterTest.cs" />
+    <Compile Include="test\JsonDataTest.cs" />
+    <Compile Include="test\JsonIgnoreMemberTest.cs" />
+    <Compile Include="test\JsonIgnoreTest.cs" />
+    <Compile Include="test\JsonMapperTest.cs" />
+    <Compile Include="test\JsonObjectImporterTest.cs" />
+    <Compile Include="test\JsonReaderTest.cs" />
+    <Compile Include="test\JsonRoundTripTest.cs" />
+    <Compile Include="test\JsonTypeHintingTest.cs" />
+    <Compile Include="test\JsonWriterTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\UnityLitJson\v15\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

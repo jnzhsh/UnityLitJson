@@ -3,7 +3,6 @@
 using UnityEngine;
 using System;
 using System.Collections;
-
 using LitJson.Extensions;
 
 namespace LitJson {
